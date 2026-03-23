@@ -10,7 +10,7 @@ public class CurrentAccount extends BankAccount {
 
     @Override
     void withdraw(double amount) {
-                // TODO Auto-generated method stub
+                // Check if the withdrawal amount is valid and within the overdraft limit
         if (amount > 0 && amount <= (customer.getBalance() + OVERDRAFT_LIMIT)){     
             double remainingAmount = customer.getBalance() - amount ;
 
